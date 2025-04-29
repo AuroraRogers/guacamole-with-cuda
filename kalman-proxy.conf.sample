@@ -1,0 +1,26 @@
+# Sample configuration file for kalman-proxy
+# This file should be placed in /usr/local/etc/guacamole/kalman-proxy.conf
+
+# Network settings
+listen_address = 0.0.0.0
+listen_port = 8080
+
+# guacd connection settings
+guacd_host = localhost
+guacd_port = 4822
+
+# Kalman filter settings
+kalman_enabled = true
+kalman_smoothing_factor = 0.8
+kalman_process_noise = 0.01
+kalman_measurement_noise = 0.1
+kalman_state_dim = 4
+kalman_measurement_dim = 2
+
+# Logging settings
+log_level = debug
+log_file = /var/log/kalman-proxy.log
+
+# Performance settings
+thread_pool_size = 4
+max_connections = 100
